@@ -15,10 +15,11 @@ class ChatContactModel {
 
   factory ChatContactModel.fromMap(Map<String, dynamic> map) {
     return ChatContactModel(
-      name: map["name"] ?? "",
-      profilePic: map["profilePic"] ?? "",
-      contactId: map["contactId"] ?? "",
-      timeSent: DateTime.fromMillisecondsSinceEpoch(map["timeSent"]),
+      name: map["name"] ?? " ",
+      profilePic: map["profilePic"] ?? " ",
+      contactId: map["contactId"] ?? " ",
+      timeSent:
+          DateTime.fromMillisecondsSinceEpoch(map["timeSent"] ?? 1640979000000),
       lastMessage: map["lastMessage"] ?? "",
     );
   }

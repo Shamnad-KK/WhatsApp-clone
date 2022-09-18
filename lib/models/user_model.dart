@@ -17,11 +17,11 @@ class UserModel {
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
-      name: map["name"] ?? "",
-      uid: map["uid"] ?? "",
-      profilePic: map["profilePic"] ?? "",
-      isOnline: map["isOnline"] ?? false,
-      phoneNumber: map["phoneNumber"] ?? "",
+      name: map["name"] ?? " ",
+      uid: map["uid"] ?? " ",
+      profilePic: map["profilePic"] ?? " ",
+      isOnline: map["isOnline"] ?? true,
+      phoneNumber: map["phoneNumber"] ?? " ",
       groupId: List<String>.from(map["groupId"]),
     );
   }
