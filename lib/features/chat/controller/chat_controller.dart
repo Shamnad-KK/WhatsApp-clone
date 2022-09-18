@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whatsapp_ui/features/auth/controller/auth_controller.dart';
 import 'package:whatsapp_ui/features/chat/repository/chat_repository.dart';
 import 'package:whatsapp_ui/models/chat_contact_model.dart';
+import 'package:whatsapp_ui/models/message_model.dart';
 
 final chatControllerProvider = Provider(
   (ref) {
@@ -34,5 +35,9 @@ class ChatController {
 
   Stream<List<ChatContactModel>> getChatContacts() {
     return chatRepository.getChatContactList();
+  }
+
+  Stream<List<MessageModel>> chatStream(String recieverUserId) {
+    return chatRepository.getChatStream(recieverUserId);
   }
 }

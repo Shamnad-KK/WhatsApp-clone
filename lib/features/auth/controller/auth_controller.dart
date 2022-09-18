@@ -57,4 +57,8 @@ class AuthController {
   Stream<UserModel> userDataById(String userId) {
     return authRepository.userData(userId);
   }
+
+  void setUserState({required bool isOnline}) {
+    authRepository.setUserState(isOnline: isOnline);
+  }
 }
